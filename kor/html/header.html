@@ -1,0 +1,164 @@
+	<header>
+		<span class="gnb_bg"></span>
+		<div class="area_header">
+			<h1><a href="#main"><img src="http://roojun16.cafe24.com/project_SPA/master/kor/images/common/txt_logo.png" alt="아산정주영 1915.11.25 ~ 2001.03.21" /></a></h1>
+			<div id="gnb">
+				<nav>
+					<h1><a href="#wrap">상단 메뉴</a></h1>
+					<div class="gnb_area">
+						<ul class="ul_gnb">
+							<li class="li_1"><a href="#sub_main_dream">아산의 꿈</a>
+								<div>
+									<div class="gnb_sub">
+										<p class="p_tit"><a href="#sub_dream_01">도전</a></p>
+										<ul>
+											 <li><a href="#sub_dream_01">꿈이 있으면 멈추지 않는다</a></li>
+											 <li><a href="#sub_dream_02">하늘과도 맞서다</a></li>
+											 <li><a href="#sub_dream_03">도전에는 끝이 없다</a></li>
+										</ul>
+									</div>
+									<div class="gnb_sub">
+										<p class="p_tit"><a href="#sub_dream_04">창의</a></p>
+										<ul>
+											 <li><a href="#sub_dream_04">거꾸로 생각하라</a></li>
+											 <li><a href="#sub_dream_05">신화가 된 아이디어</a></li>
+											 <li><a href="#sub_dream_06">상식을 깨뜨리다</a></li>
+										</ul>
+									</div>
+									<div class="gnb_sub">
+										<p class="p_tit"><a href="#sub_dream_07">희망</a></p>
+										<ul>
+											 <li><a href="#sub_dream_07">첫 길을 열다</a></li>
+											 <li><a href="#sub_dream_08">우린 한국인이다.</a></li>
+											 <li><a href="#sub_dream_09">희망의 생활 철학</a></li>
+										</ul>
+									</div>
+								</div>
+							</li>
+							<li class="li_2"><a href="#sub_main_history">아산의 발자취</a>
+								<div>
+									<div class="gnb_sub">
+										<p class="p_tit"><a href="#sub_history_01">아산의 생애</a></p>
+										<ul>
+											 <li><a href="#sub_history_01">새봄을 기다리며</a></li>
+											 <li><a href="#sub_history_02">삶과 도전</a></li>
+											 <li><a href="#sub_history_03_1">아산 연보</a></li>
+										</ul>
+									</div>
+									<div class="gnb_sub">
+										<p class="p_tit"><a href="#sub_history_04">사진으로 보는 아산</a></p>
+									</div>
+									<div class="gnb_sub">
+										<p class="p_tit"><a href="#sub_history_05">영상으로 보는 아산</a></p>
+										<ul>
+											 <li><a href="#sub_history_05">추모영상(2001)</a></li>
+											 <li><a href="#sub_history_06">강연 및 대담</a></li>
+											 <li><a href="#sub_history_07">10주기 추모영상(2011)</a></li>
+											 <li><a href="#sub_history_08">다큐멘터리 아산 정주영</a></li>
+										</ul>
+									</div>
+									<div class="gnb_sub">
+										<p class="p_tit"><a href="#sub_history_09">도서로 보는 아산</a></p>
+									</div>
+								</div>
+							</li>
+							<li class="li_3"><a href="#sub_main_echo">아산의 메아리</a></li>
+						</ul>
+					</div>
+				</nav>
+			</div>
+			<p class="lang"><a href="#wrap">ENG</a></p>
+		</div>
+		<!-- 메뉴 닫기 버튼영역(모바일)
+		<p><a href="#wrap" class="btn_close blind">메뉴 닫기</a></p>
+		-->
+	</header>
+<script>
+// // gnb
+// 	var GNB = (function(){
+// 		var $gnb = $('.gnb_area .ul_gnb'),
+// 			$li = $gnb.find(' > li:not(.li_3)'),
+// 			$target = $li.find(' > div'),
+// 			$bg = $('#header .gnb_bg');
+// 		// 웹용 gnb
+// 		$(document).on('mouseenter focus','.gnb_area .ul_gnb:not(.mo_gnb) > li:not(.li_3) > a',viewMenu);
+// 		$(document).on('mouseleave blur','.gnb_area .ul_gnb:not(.mo_gnb) > li:not(.li_3) > a',hideMenu);
+// 		$(document).on('mouseover focus','.gnb_area .ul_gnb:not(.mo_gnb) li > div',viewMenu1);
+// 		$(document).on('mouseout blur','.gnb_area .ul_gnb:not(.mo_gnb) li > div',hideMenu);
+// 		function viewMenu(){
+// 			var $this = $(this),
+// 				$parent = $this.parent(),
+// 				$target = $this.next('div'),
+// 				$all_target = $('.gnb_area .ul_gnb:not(.mo_gnb) > li:not(.li_3) > div');
+// 			$parent.siblings('li').removeClass('on');
+// 			$parent.siblings('li').find(' > div').stop().slideUp(200);
+// 			$parent.addClass('on');
+// 			$target.stop().slideDown(200);
+// 			$bg.addClass('on').stop().animate({ height : '223px' },200);
+// 			flag = false;
+// 		};
+// 		function hideMenu(){
+// 			flag = true;
+// 			setTimeout(check,100);
+// 		};
+// 		function viewMenu1(){
+// 			flag = false;
+// 			setTimeout(check,100);
+// 		};
+// 		function check(){
+// 			if (flag){
+// 				$li.removeClass('on');
+// 				$target.stop().slideUp(200);
+// 				$bg.stop().animate({ height : '0' },200);
+// 			}
+// 		}
+// 		webGnb();
+// 		$( window ).bind('resize',function(e){
+// 			clearTimeout(resizeEvt);
+// 			var resizeEvt = setTimeout(function() {
+// 				$window = $( window ).width();
+// 				webGnb();
+// 			}, 50);
+// 		});
+// 		// 모바일 처리
+// 		function webGnb(){
+// 			var _winWid = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth,
+// 				_mo = false;
+// 			if ( _winWid <= 700 ){
+// 				$gnb.addClass('mo_gnb');
+// 			} else {
+// 				$gnb.removeClass('mo_gnb');
+// 			}
+// 		}
+// 		// 모바일 열기
+// 		var $mo_open = $('#gnb h1 a'),
+// 			$base = $('#gnb');
+// 		$mo_open.bind('click',function(){
+// 			if ($base.hasClass('on')){
+// 				$base.removeClass('on');
+// 			} else {
+// 				$base.addClass('on');
+// 			}
+// 			return false;
+// 		});
+// 		// 모바일
+// 		$(document).on('click','.gnb_area .ul_gnb.mo_gnb > li:not(.li_3) > a',viewMoMenu);
+// 		function viewMoMenu(){
+// 			var $this = $(this),
+// 				$parent = $this.parent(),
+// 				$target = $this.next('div'),
+// 				$all_target = $('.gnb_area .ul_gnb.mo_gnb > li:not(.li_3) > div');
+// 			if ($parent.hasClass('on')){
+// 				var _link = $this.attr('href');
+// 				location.href = _link;
+// 			} else {
+// 				$li.removeClass('on');
+// 				$parent.addClass('on');
+// 				$all_target.slideUp(200);
+// 				$target.slideDown(200);
+// 			}
+// 			return false;
+// 		}
+// 	}());
+
+</script>
